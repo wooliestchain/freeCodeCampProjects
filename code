@@ -1,0 +1,51 @@
+import numpy as np
+
+
+def calculate(a, b, c, d, e, f, g, h, i):
+    arr = np.array([
+        [a, b, c],
+        [d, e, f],
+        [g, h, i]
+
+    ])
+
+    print(arr)
+
+    mean1 = str(arr.mean(axis=0))
+    mean2 = str(arr.mean(axis=1))
+    mean = str(arr.mean())
+
+    var1 = str(arr.var(axis=0))
+    var2 = str(arr.var(axis=1))
+    var = str(arr.var())
+
+    std1 = str(arr.std(axis=0))
+    std2 = str(arr.std(axis=1))
+    std = str(arr.std())
+
+    min1 = str(arr.min(axis=0))
+    min2 = str(arr.min(axis=1))
+    min = str(arr.min())
+
+    max1 = str(arr.max(axis=0))
+    max2 = str(arr.max(axis=1))
+    max = str(arr.max())
+
+    sum1 = str(arr.sum(axis=0))
+    sum2 = str(arr.sum(axis=1))
+    sum = str(arr.sum())
+
+    result = {
+        "mean": [str(np.array(mean1)), str(np.array(mean2)), str(np.array(mean))],
+        "var": [str(np.array(var1)), str(np.array(var2)), str(np.array(var))],
+        "standard deviation": [str(np.array(std1)), str(np.array(std2)), str(np.array(std))],
+        "max": [str(np.array(max1)), str(np.array(max2)), str(np.array(max))],
+        "min": [str(np.array(min1)), str(np.array(min2)), str(np.array(min))],
+        "sum": [str(np.array(sum1)), str(np.array(sum2)), str(np.array(sum))]
+    }
+
+    print(result)
+
+
+
+calculate(0,1,2,3,4,5,6,7,8)
